@@ -36,7 +36,7 @@ public class Task_5 {
                             insertLetter(letter, tryLetters, number);
                             tempStringName = highlightLetters(name, tryLetters);
                             System.out.println(tempStringName);
-                            if (nameGuesed(name,tryLetters)){
+                            if (nameGuessed(name,tryLetters)){
                                 System.out.println("You guessed all letters in name. Congratulations!");
                                 guess = true;
                             }
@@ -85,9 +85,9 @@ public class Task_5 {
         return tempString;
     }
 
-    public static boolean nameGuesed (String name, ArrayList <String> allLetters){
-        String nameGuese= highlightLetters(name, allLetters);
-        if (nameGuese.contains("*"))
+    public static boolean nameGuessed (String name, ArrayList <String> allLetters){
+        String nameGuess= highlightLetters(name, allLetters);
+        if (nameGuess.contains("*"))
             return false;
         else
             return true;
