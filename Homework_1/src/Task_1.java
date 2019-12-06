@@ -8,22 +8,21 @@ public class Task_1 {
         String originString = input.nextLine();
 
         String stringReverce = stringReverce(originString);
-        System.out.println("Reverce string: "+ stringReverce);
-        String [] words = stringToWords(originString);
+        System.out.println("Reverce string: " + stringReverce);
+        String[] words = stringToWords(originString);
         System.out.println("All words: ");
-        for (int i=0; i<words.length; i++){
-            System.out.println( words[i]);
+        for (int i = 0; i < words.length; i++) {
+            System.out.println(words[i]);
         }
         String changedSpaces = changeSpaces(originString);
-        System.out.println("String with *: "+ changedSpaces);
+        System.out.println("String with *: " + changedSpaces);
         String upperCaseString = upperCaseString(originString);
-        System.out.println("String upper case: "+ upperCaseString);
+        System.out.println("String upper case: " + upperCaseString);
         String subString = subString(originString, 5, 10);
-        System.out.println("Substing: "+ subString);
+        System.out.println("Substing: " + subString);
     }
 
-    public static String stringReverce(String originString)
-    {
+    private static String stringReverce(String originString) {
         StringBuilder sb = new StringBuilder();
         sb.append(originString);
         String reverceString = sb.reverse().toString();
@@ -31,27 +30,22 @@ public class Task_1 {
         return reverceString;
     }
 
-    public static String[] stringToWords (String originString)
-    {
-
+    private static String[] stringToWords(String originString) {
         String[] words = originString.replaceAll("\\s{2,}", " ").split("\\s");
         return words;
     }
 
-    public static String changeSpaces (String originString)
-    {
-        String changedString = originString.replace(' ','*');
+    private static String changeSpaces(String originString) {
+        String changedString = originString.replace(' ', '*');
         return changedString;
     }
 
-    public static String upperCaseString (String originString)
-    {
+    private static String upperCaseString(String originString) {
         String upperCaseString = originString.toUpperCase();
         return upperCaseString;
     }
 
-    public static String subString (String originString, int from, int to)
-    {
+    private static String subString(String originString, int from, int to) {
         String subString = originString.substring(from, to);
         return subString;
     }
