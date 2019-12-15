@@ -13,8 +13,18 @@ public class Task_2 {
             System.out.print("The week has only 7 days");
     }
 
-    private static String dayOfTheWeek(int day) {
-        String[] allNames = new String[]{"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
-        return allNames[day - 1];
+    enum Days{
+        Monday,
+        Tuesday,
+        Wednesday,
+        Thursday,
+        Friday,
+        Saturday,
+        Sunday
+    }
+
+    private static String dayOfTheWeek( int numberOfDay) {
+        Days[] day = Days.values();
+        return day[numberOfDay - 1].toString();
     }
 }

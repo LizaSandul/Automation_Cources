@@ -8,15 +8,16 @@ public class Task_4 {
             System.out.println(sportsmens[i]);
         }
 
-        String bestSportsmen = sportsmenPosition(1, sportsmens);
-        String secondSportsmen = sportsmenPosition(2, sportsmens);
+        String bestSportsmen = sportsmenPosition(1, sportsmens, times);
+        String secondSportsmen = sportsmenPosition(2, sportsmens, times);
 
         System.out.println("Best sportsmen " + bestSportsmen);
         System.out.println("Second place has sportsmen " + secondSportsmen);
     }
 
-    private static String sportsmenPosition(int place, String[] sportsmens) {
-        return sportsmens[place];
+    private static String sportsmenPosition(int position, String[] names, int[] times) {
+        String[] sortedSportsmens = sortSportsmens(names, times);
+        return sortedSportsmens[position];
     }
 
     private static String[] sortSportsmens(String[] names, int[] times) {
