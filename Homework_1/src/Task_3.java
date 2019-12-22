@@ -5,11 +5,11 @@ public class Task_3 {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter length of rhomb side ");
         int length = input.nextInt();
-        int N = length*2-1;
+        int n = length * 2 - 1;
 
-        for (int i=0; i<N; i++) {
-            for (int j = 0; j < N; j++) {
-                if (j == N/2-i || j == i-N/2 || j==i+N/2 || j ==N-i+N/2-1)
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (j == n / 2 - i || j == i - n / 2 || j == i + n / 2 || j == n - i + n / 2 - 1)
                     System.out.print("*");
                 else
                     System.out.print(" ");
